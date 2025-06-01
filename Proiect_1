@@ -6,6 +6,9 @@ public class Main {
         
         System.out.println("Alege o figură geometrică pentru a calcula aria:");
         System.out.println("1. Cerc");
+        System.out.println("2. Pătrat");
+        System.out.println("3. Dreptunghi");
+        System.out.print("Introdu opțiunea ta (1-3): ");
 
         
         int optiune;
@@ -24,6 +27,13 @@ public class Main {
                 double raza = scanner.nextDouble();
                 double ariaCerc = Math.PI * raza * raza;
                 System.out.printf("Aria cercului este: %.2f", ariaCerc);
+                break;
+
+            case 2:
+                System.out.print("Introdu latura pătratului: ");
+                double latura = scanner.nextDouble();
+                double ariaPatrat = latura * latura;
+                System.out.printf("Aria pătratului este: %.2f", ariaPatrat);
                 break;
                 
 
