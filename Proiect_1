@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Alege o figură geometrică pentru a calcula aria:");
+        System.out.println("1. Cerc");
+
+        
+        int optiune;
+        try {
+            optiune = scanner.nextInt();
+            scanner.nextLine();  // Curăță buffer-ul
+        } catch (Exception e) {
+            System.out.println("Te rog introdu un număr valid!");
+            scanner.close();
+            return;
+        }
+        
+        switch (optiune) {
+            case 1:
+                System.out.print("Introdu raza cercului: ");
+                double raza = scanner.nextDouble();
+                double ariaCerc = Math.PI * raza * raza;
+                System.out.printf("Aria cercului este: %.2f", ariaCerc);
+                break;
+                
+
+                
+            default:
+                System.out.println("Opțiune invalidă!");
+        }
+        
+        // Pauză pentru a vedea rezultatul
+        System.out.println("\nApasă Enter pentru a ieși...");
+        scanner.nextLine();
+        scanner.close();
+    }
+}
